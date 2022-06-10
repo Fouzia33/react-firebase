@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { auth } from '../utils/firebase.config';
+
 const SignUp = () => {
     const registerEmail = useRef();
     const registerPassword = useRef();
@@ -17,7 +18,6 @@ const SignUp = () => {
                     await userAuth.user.updateProfile({
                         displayName
                     });
-                    console.log(userAuth);
                     window.location.reload();
                 });
         } catch (error) {
